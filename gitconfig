@@ -1,0 +1,19 @@
+[user]
+	name = Thomas Ferris Nicolaisen
+	email = tfnico@gmail.com
+[alias]
+   st = status
+   co = checkout
+   ci = commit
+   b = branch
+   upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
+   logv = log --name-only
+   showv = show --name-only
+
+[apply]
+   whitespace = nowarn
+[color]
+   ui = auto
+[mergetool "diffmerge"]
+   cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
+   trustExitCode = false
