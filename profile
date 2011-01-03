@@ -76,3 +76,5 @@ APPS=$MVN_HOME/bin:$ANT_HOME/bin
 PATH=~/bin:$APPS:$PATH
 
 export EDITOR=vim
+
+export MAVEN_OPTS="-Xmx1024m"
