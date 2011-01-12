@@ -7,7 +7,7 @@
    ci = commit
    b = branch
    upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
-   upcido = !git update-ref refs/remotes/git-svn refs/remotes/origin/master
+   upcido = !git update-ref refs/remotes/git-svn refs/remotes/origin/master && git svn dcommit
    logv = log --name-only
    showv = show --name-only
    cp = cherry-pick -e
