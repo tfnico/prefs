@@ -78,3 +78,6 @@ PATH=~/bin:$APPS:$PATH
 export EDITOR=vim
 
 export MAVEN_OPTS="-Xmx1024m"
+
+# Fix for iterm2's encoding.
+export LC_ALL="en_US.UTF-8"
