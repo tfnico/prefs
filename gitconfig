@@ -16,6 +16,14 @@
    whitespace = nowarn
 [color]
    ui = auto
+[core]
+	editor = /usr/bin/vim
+[diff]
+	tool = diffmerge
+[merge]
+	tool = diffmerge
 [mergetool "diffmerge"]
-   cmd = diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE
-   trustExitCode = false
+	cmd = diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+	trustexitcode = true
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
