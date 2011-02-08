@@ -27,3 +27,5 @@
 	trustexitcode = true
 [difftool "diffmerge"]
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[mergetool]
+	keepBackup = false
