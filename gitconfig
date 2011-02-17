@@ -1,23 +1,23 @@
 [user]
-	name = Thomas Ferris Nicolaisen
-	email = tfnico@gmail.com
+    name = Thomas Ferris Nicolaisen
+    email = tfnico@gmail.com
 [alias]
-   st = status
-   co = checkout
-   ci = commit
-   b = branch
-   upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
-   upcido = !git update-ref refs/remotes/git-svn refs/remotes/origin/master && git svn dcommit
-   logv = log --name-only
-   showv = show --name-only
-   cp = cherry-pick -e
-
+    st = status
+    co = checkout
+    ci = commit
+    b = branch
+    upci = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
+    upcido = !git update-ref refs/remotes/git-svn refs/remotes/origin/master && git svn dcommit
+    logv = log --name-only
+    showv = show --name-only
+    cp = cherry-pick -e
+    walk = !git-walk
 [apply]
-   whitespace = nowarn
+    whitespace = nowarn
 [color]
-   ui = auto
+    ui = auto
 [core]
-	editor = /usr/bin/vim
+    editor = /usr/bin/vim
 [diff]
 	tool = diffmerge
 [merge]
@@ -29,3 +29,5 @@
 	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [mergetool]
 	keepBackup = false
+[svn]
+	rmdir = true
