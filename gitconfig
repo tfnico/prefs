@@ -13,6 +13,7 @@
     cp = cherry-pick -e
     walk = !git-walk
     inc = whatchanged
+    diffc = diff --cached
 [apply]
     whitespace = nowarn
 [color]
