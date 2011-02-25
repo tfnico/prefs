@@ -1,0 +1,2 @@
+#!
+diff gitconfig ../.gitconfig
