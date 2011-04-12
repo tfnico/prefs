@@ -33,3 +33,5 @@
 	keepBackup = false
 [svn]
 	rmdir = true
+[help]
+	autocorrect = 5
