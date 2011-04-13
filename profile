@@ -1,4 +1,5 @@
-PS1='[\t] \u@\[\e[31;1m\]\h:\[\e[0m\]\w\[\e[0m\]/>\[\e[0m\]'
+#PS1='[\t] \u@\[\e[31;1m\]\h:\[\e[0m\]\w\[\e[0m\]/>\[\e[0m\]'
+PS1='\u\[\e[31;1m\]:\[\e[0m\]\w\[\e[0m\]/>\[\e[0m\]'
 ANT_HOME=/Developer/ant/current
 MVN_HOME=/Developer/maven/current
 
