@@ -1,3 +1,7 @@
+" pathogen
+call pathogen#runtime_append_all_bundles() 
+
+" syntax
 syn on
 " 4 spaces for tabs
 set expandtab
