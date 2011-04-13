@@ -5,3 +5,6 @@ set tabstop=4
 set shiftwidth=4
 " Nice search
 set incsearch hlsearch
+" Theme
+set background=dark
+colorscheme solarized
