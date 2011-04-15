@@ -1,5 +1,7 @@
-#PS1='[\t] \u@\[\e[31;1m\]\h:\[\e[0m\]\w\[\e[0m\]/>\[\e[0m\]'
-PS1='\u\[\e[31;1m\]:\[\e[0m\]\w\[\e[0m\]/>\[\e[0m\]'
+function parse_git_branch_and_add_brackets {
+git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\[\1\]/'
+}
+PS1="[\t] \u\[\e[31;1m\]:\[\e[0m\]\w/\[\033[0;32m\]\$(parse_git_branch_and_add_brackets)\[\033[0m\]>"
 ANT_HOME=/Developer/ant/current
 MVN_HOME=/Developer/maven/current
 
