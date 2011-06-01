@@ -1,0 +1,1 @@
+while ! git svn fetch ; do echo "git-svn halted. Restarting...i"; done

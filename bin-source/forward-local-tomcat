@@ -1,0 +1,7 @@
+#!
+#For local testing:
+sudo /sbin/ipfw add 100 forward 127.0.0.1,8080 tcp from 127.0.0.1 to 127.0.0.1 80
+sudo /sbin/ipfw add 200 forward 127.0.0.1,8443  tcp from 127.0.0.1 to 127.0.0.1 443
+#requests from other machines
+sudo ipfw add 100 fwd 127.0.0.1,8443 tcp from any to 172.16.5.78 443 in
+sudo ipfw add 100 fwd 127.0.0.1,8080 tcp from any to 172.16.5.78 80 in

@@ -1,0 +1,2 @@
+#!
+sudo /sbin/mount_nfs -P filer01:/exports/volume01/samba/systemwide-opdata /srv/ips/storage/systemwide-opdata/resources
