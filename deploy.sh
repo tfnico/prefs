@@ -1,7 +1,7 @@
 #!
-cp gitconfig ~/.gitconfig
-cp vimrc ~/.vimrc
-cp profile ~/.profile
-cp subversion-config ~/.subversion/config
+cp -i -v gitconfig ~/.gitconfig
+cp -i -v vimrc ~/.vimrc
+cp -i -v profile ~/.profile
+cp -i -v subversion-config ~/.subversion/config
 #cp -R vim/ ~/.vim
-cp -R bin-source/ ~/bin
+cp -i -v -R bin-source/ ~/bin
