@@ -1,0 +1,2 @@
+#!
+find . -type d -empty
