@@ -11,6 +11,7 @@ APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin
 
 PATH=~/bin:$APPS:$PATH
 
+export TERM=xterm-256color
 export EDITOR=vim
 
 export MAVEN_OPTS="-XX:MaxPermSize=256m -Xmx1024m"
