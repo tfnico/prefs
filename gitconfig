@@ -7,7 +7,7 @@
     ci = commit
     b = branch
     pull-svn = pull --rebase
-    push-svn = !git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
+    push-svn = !git pull-svn && git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
     logv = log --name-status
     logtree = log --graph --oneline --all
     showv = show --name-status
