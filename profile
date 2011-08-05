@@ -6,8 +6,9 @@ PS1='[\t] \u\[\e[31;1m\]:\[\e[0m\]\w/\[\033[0;32m\]$(__git_ps1 "[%s]")\[\033[0m\
 ANT_HOME=/Developer/ant/current
 MVN_HOME=/Developer/maven/current
 GRAILS_HOME=/Developer/grails/current
+CLOJURESCRIPT_HOME=/Developer/clojurescript/current
 
-APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin
+APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$CLOJURESCRIPT_HOME/bin
 
 PATH=~/bin:$APPS:$PATH
 
