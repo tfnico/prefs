@@ -1,3 +1,5 @@
+# Solarized dircolors:
+eval `dircolors /home/tfnico/prefs/dir_colors`
 # Git auto completion
 source ~/prefs/git-completion.bash
 
