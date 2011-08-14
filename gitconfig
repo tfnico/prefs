@@ -9,7 +9,7 @@
     pull-svn = pull --rebase
     push-svn = !git pull-svn && git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
     logv = log --name-status
-    logtree = log --graph --oneline --all
+    logtree = log --graph --oneline --decorate --all
     showv = show --name-status
     cp = cherry-pick -e
     walk = !git-walk
