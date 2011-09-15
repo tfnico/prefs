@@ -29,3 +29,4 @@ plugins=(git history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+source prefs/env
