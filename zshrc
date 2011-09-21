@@ -24,9 +24,11 @@ CASE_SENSITIVE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git history-substring-search)
+plugins=(history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
+source ~/prefs/git-completion.bash
 
 # Customize to your needs...
+unsetopt correct_all
 source prefs/env
