@@ -2,8 +2,10 @@ ANT_HOME=/Developer/ant/current
 MVN_HOME=/Developer/maven/current
 GRAILS_HOME=/Developer/grails/current
 CLOJURESCRIPT_HOME=/Developer/clojurescript/current
+PG_HOME=/Library/PostgreSQL/8.4
+FLASH_PLAYER="/Applications/Flash Player Debugger.app/Contents/MacOS/"
 
-APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$CLOJURESCRIPT_HOME/bin
+APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER
 
 PATH=~/bin:$APPS:$PATH
 
