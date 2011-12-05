@@ -6,9 +6,11 @@
     co = checkout
     ci = commit
     b = branch
+    up = !git stash && git pull --rebase && git stash pop
     pull-svn = pull --rebase
     push-svn = !git pull-svn && git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
     logv = log --name-status
+    logd = log --decorate
     logtree = log --graph --oneline --decorate --all
     showv = show --name-status
     cp = cherry-pick -e
