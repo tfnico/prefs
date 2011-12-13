@@ -11,4 +11,6 @@ set shiftwidth=4
 set incsearch hlsearch
 " Theme
 set background=dark
+set showcmd
+
 colorscheme solarized
