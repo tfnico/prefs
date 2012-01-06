@@ -31,4 +31,6 @@ source ~/prefs/git-completion.bash
 
 # Customize to your needs...
 unsetopt correct_all
-source ~/prefs/env
+if [ -f "$HOME/prefs/env" ]; then
+  source $HOME/prefs/env
+fi
