@@ -1,4 +1,4 @@
-#!
+#!/bin/zsh
 echo "If you are at work make sure that the git-email remains the work mail!!"
 cp -i -v gitconfig ~/.gitconfig
 cp -i -v vimrc ~/.vimrc
