@@ -1,0 +1,36 @@
+#!
+mkdir remove-me.git 
+cd remove-me.git 
+echo `pwd`
+git init 
+cat  > hello.sh << EOS 
+#/bin/sh 
+#c0 
+/usr/bin/true 
+EOS
+chmod a+x hello.sh 
+git add hello.sh 
+git commit -m "c0" hello.sh 
+gsed -i s/c0/c1/ hello.sh
+git commit -m "c1" hello.sh
+git rev-parse HEAD > this-is-good 
+gsed -i s/c1/c2/ hello.sh
+git commit -m "c2" hello.sh
+gsed -i s/c2/c3/ hello.sh
+git commit -m "c3" hello.sh
+gsed -i s/c3/c4/ hello.sh
+gsed -i s/true/false/ hello.sh
+git commit -m "c4" hello.sh
+git rev-parse HEAD > this-is-bad
+
+git bisect start 
+git bisect good $(cat this-is-good) 
+git bisect bad $(cat this-is-bad) 
+git bisect run ./hello.sh > git-bisect-run.out 
+
+git rev-parse HEAD > this-is-after-git-bisect-run 
+git bisect log | grep 'git bisect' 
+git bisect reset 
+gsed -n s'/\([0-9a-f]\{40\}\) is the first bad commit/\1/p' git-bisect-run.out 
+cat this-is-after-git-bisect-run 
+
