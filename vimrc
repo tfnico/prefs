@@ -14,3 +14,6 @@ set background=dark
 set showcmd
 
 colorscheme solarized
+
+
+command -nargs=? Swrite :w !sudo tee %
