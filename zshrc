@@ -34,3 +34,5 @@ unsetopt correct_all
 if [ -f "$HOME/prefs/env" ]; then
   source $HOME/prefs/env
 fi
+
+[[ -s "/Users/tfnico/.rvm/scripts/rvm" ]] && source "/Users/tfnico/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

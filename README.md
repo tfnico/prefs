@@ -14,3 +14,6 @@ Emacs setup is from
 - http://batsov.com/articles/2011/10/09/getting-started-with-emacs-24/
 - git clone git://github.com/bbatsov/emacs-prelude.git
 - ln -s projects/emacs-prelude ~/.emacs.d
+
+Install RVM like this:
+- bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
