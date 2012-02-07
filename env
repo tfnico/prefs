@@ -8,7 +8,8 @@ FLASH_PLAYER="/Applications/Flash Player Debugger.app/Contents/MacOS/"
 
 APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER
 
-PATH=~/bin:$APPS:$PATH
+# Note that we put /usr/local/bin in front of normal $PATH due to homebrew
+PATH=~/bin:$APPS:/usr/local/bin:$PATH
 
 export TERM=xterm-256color
 export EDITOR=vim
