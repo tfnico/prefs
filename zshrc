@@ -35,4 +35,5 @@ if [ -f "$HOME/prefs/env" ]; then
   source $HOME/prefs/env
 fi
 
+# Add RVM stuff (ruby environment manager)
 [[ -s "/Users/tfnico/.rvm/scripts/rvm" ]] && source "/Users/tfnico/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
