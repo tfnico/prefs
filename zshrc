@@ -37,3 +37,6 @@ fi
 
 # Add RVM stuff (ruby environment manager)
 [[ -s "/Users/tfnico/.rvm/scripts/rvm" ]] && source "/Users/tfnico/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# Zsh tab completion for cd ..
+zstyle ':completion:*' special-dirs true
