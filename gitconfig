@@ -3,6 +3,8 @@
     email = tfnico@gmail.com
     #email = thomas.nicolaisen@viaboxx.de
 [alias]
+    attic = "!f() { git tag attic/$1 $1;git branch -d $1;}; f"
+# git branch -D $1
     st = status
     co = checkout
     ci = commit
