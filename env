@@ -14,6 +14,9 @@ PATH=~/bin:$APPS:/usr/local/bin:$PATH
 # And git OSX installer has a special place:
 PATH=/usr/local/git/bin:$PATH
 
+# Detect and use macvim on OSX:
+case $OSTYPE in darwin*) alias vim=/Applications/MacVim.app/Contents/MacOS/Vim ;; esac
+
 export TERM=xterm-256color
 export EDITOR=vim
 
