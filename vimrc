@@ -15,5 +15,7 @@ set showcmd
 
 colorscheme solarized
 
-
 command -nargs=? Swrite :w !sudo tee %
+
+" Share reg between terminals:
+set clipboard+=unnamed
