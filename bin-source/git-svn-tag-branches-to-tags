@@ -1,0 +1,9 @@
+#!/bin/zsh
+git for-each-ref --format="%(refname)" refs/remotes/tags/ |
+while read tag; do
+    GIT_COMMITTER_DATE="$(git log -1 --pretty=format:"%ad" "$tag")" \
+    GIT_COMMITTER_EMAIL="$(git log -1 --pretty=format:"%ce" "$tag")" \
+    GIT_COMMITTER_NAME="$(git log -1 --pretty=format:"%cn" "$tag")" \
+    git tag -m "$(git for-each-ref --format="%(contents)" "$tag")" \
+        ${tag#refs/remotes/tags/} "$tag"
+done
