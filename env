@@ -11,6 +11,9 @@ APPS=$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRI
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
 PATH=~/bin:$APPS:/usr/local/bin:$PATH
 
+# And git OSX installer has a special place:
+PATH=/usr/local/git/bin:$PATH
+
 export TERM=xterm-256color
 export EDITOR=vim
 
