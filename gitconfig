@@ -42,3 +42,6 @@
 	rmdir = true
 [help]
 	autocorrect = 5
+[push]
+	default = upstream
+
