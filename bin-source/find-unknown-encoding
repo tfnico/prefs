@@ -1,0 +1,2 @@
+#!/bin/zsh
+find . | xargs file -I | grep -v .git | grep unknown

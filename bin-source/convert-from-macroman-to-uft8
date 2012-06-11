@@ -1,0 +1,7 @@
+#!/bin/zsh
+for file in `find-unknown-encoding | cut -d: -f1`; do
+    iconv -f macroman -t utf-8 $file > ${file}.utf8
+#    iconv -f cp437 -t utf-8 $file > ${file}.utf8
+done
+
+find . -name '*.utf8' -type f | while read NAME ; do mv "${NAME}" "${NAME%.utf8}" ; done

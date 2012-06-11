@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#From http://www.coastalvectors.com/blog/2011/02/utf-8-converter/
+
+usage() {
+echo Usage: $0 "[-v | --verbose] [-d | --debug] [-e | --encoding <encoding>] <input> <output>"
+exit 1
+}
+
+VERBOSE=false
+ENCODING=MACROMAN
+DEBUG=false
+
+while true; do
+case $1 in
+-v | --verbose) VERBOSE=true;;
+-d | --debug) DEBUG=true;;
+-*) echo "Bad option $1"; usage;;
+*) break;;
+esac
+shift
+done
+
+SOURCE="$1"
+DESTINATION="$2"
+
+if [ $DEBUG = true ]; then
+echo VERBOSE = $VERBOSE
+echo SOURCE = $SOURCE
+echo DESTINATION = "$DESTINATION"
+echo ENCODING = "$ENCODING"
+exit
+fi
+
+if [ "x$SOURCE" = x -o "x$DESTINATION" = x ]; then
+usage;
+fi
+
+convert() {
+INPUT="$1"
+OUTPUT="$2"
+FILENAME=`basename "$INPUT"`
+if file "$INPUT" | grep Unicode ; then
+cp "$INPUT" "$OUTPUT"
+$VERBOSE && echo "Successfully copied $FILENAME"
+else
+iconv -s -f $ENCODING -t UTF-8 "$INPUT" >"$OUTPUT/$FILENAME"
+$VERBOSE && echo "Successfully converted $FILENAME"
+fi
+}
+
+if [ -d "$SOURCE" ]; then
+for INPUT in "$SOURCE"/* ; do
+convert "$INPUT" "$DESTINATION"
+done
+else
+convert "$SOURCE" "$DESTINATION"
+fi
+
+exit
