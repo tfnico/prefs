@@ -1,0 +1,2 @@
+#!/bin/zsh
+for dir in `find . -type d -maxdepth 1`; do git tag -l | xargs git tag -d; done;
