@@ -24,7 +24,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(history-substring-search vi-mode)
+plugins=(vi-mode history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 source ~/prefs/git-completion.bash
