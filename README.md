@@ -20,3 +20,10 @@ Emacs setup is from
 
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+
+Install Janus like this:
+- curl -Lo- https://bit.ly/janus-bootstrap | bash
+
+./janus bundles (TODO: Fetch these automatically):
+- git://github.com/altercation/vim-colors-solarized.git
+- git@github.com:tfnico/vim-gradle.git
