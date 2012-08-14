@@ -1,3 +1,6 @@
+Got vim janus from 
+- https://github.com/carlhuda/janus/
+
 Got vim bundle and iTerm colors from:
 - http://ethanschoonover.com/solarized
 
