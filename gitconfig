@@ -43,5 +43,5 @@
 [help]
 	autocorrect = 5
 [push]
-	default = upstream
+	default = tracking
 
