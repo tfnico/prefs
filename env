@@ -14,6 +14,8 @@ APPS=$GIT_HOME/bin:$GRADLE_HOME/bin:$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
 PATH=~/bin:$APPS:/usr/local/bin:$PATH
 
+# Add NPM packages to node's path:
+export NODE_PATH=/usr/local/lib/node_modules
 
 # Detect and use macvim on OSX:
 case $OSTYPE in darwin*) alias vim=/Applications/MacVim.app/Contents/MacOS/Vim ;; esac
