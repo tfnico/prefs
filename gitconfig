@@ -29,19 +29,18 @@
     editor = /usr/bin/vim
 [diff]
 	tool = diffmerge
+[difftool]
+	prompt = false
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = diffmerge
+[mergetool]
+	keepBackup = false
 [mergetool "diffmerge"]
 	cmd = diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustexitcode = true
-[difftool "diffmerge"]
-	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
-[mergetool]
-	keepBackup = false
 [svn]
 	rmdir = true
-[help]
-	autocorrect = 5
 [push]
 	default = tracking
-
