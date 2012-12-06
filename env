@@ -9,8 +9,9 @@ PG_HOME=/Library/PostgreSQL/8.4
 FLASH_PLAYER="/Applications/Flash Player Debugger.app/Contents/MacOS"
 AIR_SDK=/Developer/AdobeAIRSDK
 SBT_HOME=/Developer/sbt
+VAGRANT_HOME=/opt/vagrant
 
-APPS=$SBT_HOME/bin:$GIT_HOME/bin:$GRADLE_HOME/bin:$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER:$AIR_SDK/bin
+APPS=$VAGRANT_HOME/bin:$SBT_HOME/bin:$GIT_HOME/bin:$GRADLE_HOME/bin:$MVN_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER:$AIR_SDK/bin
 
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
 PATH=~/bin:~/company-bin:$APPS:/usr/local/bin:$PATH
