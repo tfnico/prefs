@@ -40,3 +40,4 @@ fi
 
 # Zsh tab completion for cd ..
 zstyle ':completion:*' special-dirs true
+
