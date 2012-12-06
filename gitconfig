@@ -9,7 +9,7 @@
     co = checkout
     ci = commit
     b = branch
-    up = !git stash && git pull --rebase && git stash pop
+    pull-stash-rebase = !git stash && git pull --rebase && git stash pop
     pull-svn = pull --rebase
     push-svn = !git pull-svn && git update-ref refs/remotes/$(git branch | grep '^*' | awk '{print $2}') refs/remotes/origin/$(git branch|grep '^*'|awk '{print $2}') && git svn dcommit
     undo-merge-rebase-instead = !git reset --hard HEAD~1 && git pull --rebase
