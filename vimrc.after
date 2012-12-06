@@ -1,0 +1,17 @@
+set background=dark
+colorscheme solarized
+
+" 4 spaces for tabs
+set expandtab
+set tabstop=4
+set shiftwidth=4
+"
+" Share reg between terminals:
+set clipboard+=unnamed
+
+" Special tabspace per filetype:
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype puppet setlocal ts=2 sts=2 sw=2
+
+syntax enable
+

@@ -1,7 +1,8 @@
-Got vim janus from 
+Vim-Janus:
+- curl -Lo- https://bit.ly/janus-bootstrap | bash
 - https://github.com/carlhuda/janus/
 
-Got vim bundle and iTerm colors from:
+Get vim bundle and iTerm colors from:
 - http://ethanschoonover.com/solarized
 
 Set up Gnome terminal with the dircolors from:
@@ -21,9 +22,6 @@ Emacs setup is from
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 
-Install Janus like this:
-- curl -Lo- https://bit.ly/janus-bootstrap | bash
-
-./janus bundles (TODO: Fetch these automatically):
+Clone these into ~/.vim/janus (TODO: do so automatically):
 - git://github.com/altercation/vim-colors-solarized.git
 - git@github.com:tfnico/vim-gradle.git
