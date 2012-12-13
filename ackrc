@@ -1,0 +1,6 @@
+#this doesn't work yet: --type-set=vagrant=Vagrantfile -see https://github.com/petdance/ack/pull/213
+--type-set=txt=.txt,.md
+--type-set=puppet=.pp
+--type-set=groovy=.groovy,.gradle
+--type-add=ruby=.haml,.rake,.rsel,.erb
+#--pager=less -r

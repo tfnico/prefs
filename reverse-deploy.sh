@@ -6,6 +6,7 @@ cp -i -v ~/.vimrc vimrc
 cp -i -v ~/.vimrc.before vimrc.before
 cp -i -v ~/.profile profile
 cp -i -v ~/.zshrc zshrc
+cp -i -v ~/.ackrc ackrc
 cp -i -v ~/.subversion/config subversion-config
 #cp -R vim/ ~/.vim
 cp -v -R ~/bin/* bin-source
