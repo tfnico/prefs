@@ -1,5 +1,6 @@
 #!/bin/zsh
 echo "If you are at work make sure that the git-email remains the work mail!!"
+cp -i -v tmux.conf ~/.tmux.conf
 cp -i -v gitconfig ~/.gitconfig
 cp -i -v vimrc.before ~/.vimrc.before
 cp -i -v vimrc ~/.vimrc
