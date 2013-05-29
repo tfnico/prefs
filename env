@@ -13,9 +13,17 @@ SBT_HOME=~/dev/sbt
 VAGRANT_HOME=/opt/vagrant
 VERTX_HOME=~/dev/vertx/current
 
-APPS=$VERTX_HOME/bin:$VAGRANT_HOME/bin:$SBT_HOME/bin:$GIT_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER:$AIR_SDK/bin
-# Commented out since I prefer the ones from homebrew
-#APPS=$APPS:$MVN_HOME/bin:$GRADLE_HOME/bin
+APPS=$VERTX_HOME/bin:\
+$VAGRANT_HOME/bin:\
+$SBT_HOME/bin:\
+$GIT_HOME/bin:\
+$ANT_HOME/bin:\
+$GRAILS_HOME/bin:\
+$GRIFFON_HOME/bin:\
+$CLOJURESCRIPT_HOME/bin:\
+$PG_HOME/bin:\
+$FLASH_PLAYER:\
+$AIR_SDK/bin
 
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
 PATH=~/bin:~/company-bin:$APPS:/usr/local/bin:$PATH
