@@ -1,17 +1,17 @@
-ANT_HOME=/Developer/ant/current
+ANT_HOME=~/dev/ant/current
 # Commented out mvn since I prefer the one from homebrew
-#MVN_HOME=/Developer/maven/current
+#MVN_HOME=~/dev/maven/current
 GIT_HOME=/usr/local/git
 # Use gradle from homebrew
-# GRADLE_HOME=/Developer/gradle/current
-GRIFFON_HOME=/Developer/griffon/current
-CLOJURESCRIPT_HOME=/Developer/clojurescript/current
+# GRADLE_HOME=~/dev/gradle/current
+GRIFFON_HOME=~/dev/griffon/current
+CLOJURESCRIPT_HOME=~/dev/clojurescript/current
 PG_HOME=/Library/PostgreSQL/9.2
 FLASH_PLAYER="/Applications/Flash Player Debugger.app/Contents/MacOS"
-AIR_SDK=/Developer/AdobeAIRSDK
-SBT_HOME=/Developer/sbt
+AIR_SDK=~/dev/AdobeAIRSDK
+SBT_HOME=~/dev/sbt
 VAGRANT_HOME=/opt/vagrant
-VERTX_HOME=/Developer/vertx/current
+VERTX_HOME=~/dev/vertx/current
 
 APPS=$VERTX_HOME/bin:$VAGRANT_HOME/bin:$SBT_HOME/bin:$GIT_HOME/bin:$ANT_HOME/bin:$GRAILS_HOME/bin:$GRIFFON_HOME/bin:$CLOJURESCRIPT_HOME/bin:$PG_HOME/bin:$FLASH_PLAYER:$AIR_SDK/bin
 # Commented out since I prefer the ones from homebrew
@@ -35,7 +35,7 @@ export MAVEN_OPTS="-XX:MaxPermSize=256m -Xmx1024m"
 export LC_ALL="en_US.UTF-8"
 
 # For my chromium launcher
-export CHROMIUM_APP=/Developer/chromium/current
+export CHROMIUM_APP=~/dev/chromium/current
 
 alias pb=pbcopy
 
