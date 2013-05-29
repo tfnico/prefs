@@ -12,6 +12,7 @@ AIR_SDK=~/dev/AdobeAIRSDK
 SBT_HOME=~/dev/sbt
 VAGRANT_HOME=/opt/vagrant
 VERTX_HOME=~/dev/vertx/current
+MYSQL_HOME=/usr/local/mysql
 
 APPS=$VERTX_HOME/bin:\
 $VAGRANT_HOME/bin:\
@@ -23,7 +24,9 @@ $GRIFFON_HOME/bin:\
 $CLOJURESCRIPT_HOME/bin:\
 $PG_HOME/bin:\
 $FLASH_PLAYER:\
-$AIR_SDK/bin
+$AIR_SDK/bin:\
+$MYSQL_HOME/bin
+
 
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
 PATH=~/bin:~/company-bin:$APPS:/usr/local/bin:$PATH
