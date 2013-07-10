@@ -29,7 +29,7 @@ $MYSQL_HOME/bin
 
 
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
-PATH=~/bin:~/company-bin:$APPS:/usr/local/bin:$PATH
+PATH=~/bin:~/company-bin:$APPS:/usr/local/bin:/usr/local/sbin:$PATH
 
 # Add NPM packages to node's path:
 export NODE_PATH=/usr/local/lib/node_modules
