@@ -1,0 +1,71 @@
+#!/bin/bash
+
+function usage() {
+  echo 'Usage: what-did-i-do {options}'
+  echo
+  echo 'OPTIONS:'
+  echo '    -a   author/committer        (defaults to Jason Rogers)'
+  echo '    -s   since such date         (defaults to 7.days.ago)'
+  echo '    -u   until such date         (defaults to today)'
+  echo '    -o   author output format    (one of short, full, initials -- defaults to initials)'
+  echo
+  echo '-s and -u accepts any Git date: 2013-03-01, 7.days.ago, today, yesterday'
+  exit 0
+}
+
+SINCE='7.days.ago'
+UNTIL='today'
+AUTHOR='tnicol'
+AUTHOR_OUTPUT='initials'
+
+while getopts “ha:s:o:u:” OPTION
+do
+  case $OPTION in
+    h)
+      usage
+      exit 1
+        ;;
+    a)
+      AUTHOR=$OPTARG
+      ;;
+    o)
+      AUTHOR_OUTPUT=$OPTARG
+      ;;
+    s)
+      SINCE=$OPTARG
+      ;;
+    u)
+      UNTIL=$OPTARG
+      ;;
+    ?)
+      usage
+      exit
+      ;;
+  esac
+done
+
+function initials() {
+  echo $AUTHOR | ruby -e'print $stdin.read.split(" ").map{|e| e[0]}.join("")'
+}
+function shortname() {
+  echo $AUTHOR | ruby -e'words = $stdin.read.split(" "); print words[0]; print words[1][0]'
+}
+
+case $AUTHOR_OUTPUT in
+  full)
+    AUTHOR_OUTPUT=$AUTHOR
+    ;;
+  initials)
+    AUTHOR_OUTPUT=$(initials)
+    ;;
+  short)
+    AUTHOR_OUTPUT=$(shortname)
+    ;;
+  *?)
+    echo "unrecognized author output ('$AUTHOR_OUTPUT'); using 'initials'"
+    AUTHOR_OUTPUT=$(initials)
+    ;;
+esac
+
+git log --no-merges --pretty=format:"$AUTHOR_OUTPUT - %ad -> %s" --date-order --date=short --since=$SINCE --until=$UNTIL --author="$AUTHOR"
+

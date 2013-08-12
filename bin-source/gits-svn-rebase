@@ -1,0 +1,2 @@
+#!/bin/zsh
+gits --no-master svn rebase
