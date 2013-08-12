@@ -48,3 +48,5 @@
 	default = tracking
 [rebase]
 	autosquash = true
+[pager]
+	stash = false
