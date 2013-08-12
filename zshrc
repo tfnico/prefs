@@ -41,3 +41,10 @@ fi
 # Zsh tab completion for cd ..
 zstyle ':completion:*' special-dirs true
 
+# Source the shell switcher at work
+if [ -f "$HOME/.shell.sh" ]; then
+  source ~/.shell.sh
+fi
+
+#Aliases
+alias tig="TERM=screen /usr/local/bin/tig"
