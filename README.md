@@ -1,3 +1,41 @@
+Conrecete TODO's:
+- Replace deploy-script with vcsh repos
+- Separate mac stuff from linux specific stuff (using vcsh?)
+- Incorporate puppet (with homebrew on mac)
+- Figure out how to manage keys
+
+Discrepancies on Mac:
+- Terminal is different
+- Copy/paste works differently (for tmux, vim)
+- Super/meta buttons are different (not a problem so far?)
+- Remapping caps to ESC is done manually
+
+Problems for automating
+- Janus & Prelude are not packaged
+- Have to install puppet and git manually for bootstrapping (git is
+  probably already in though)
+
+
+Packages (these are installed by running puppet):
+- ruby (1.9.3 or newer because of tmuxinator)
+- vcsh
+- tmux
+- vim
+- mr
+- node
+
+Gems (these have to be installed manually with gem install):
+- tmuxinator
+
+Running puppet
+  sudo puppet apply my-machine.pp
+
+vcsh repositories:
+- https://github.com/tfnico/config-vim
+
+To be moved into vcsh repos:
+- 
+
 Vim-Janus:
 - curl -Lo- https://bit.ly/janus-bootstrap | bash
 - https://github.com/carlhuda/janus/
