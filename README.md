@@ -11,10 +11,19 @@ Discrepancies on Mac:
 - Remapping caps to ESC is done manually
 
 Problems for automating
-- Janus & Prelude are not packaged
+- Janus
+- Prelude
+- oh-my-zsh
 - Have to install puppet and git manually for bootstrapping (git is
   probably already in though)
-
+- vim-plugins (.janus/* as submodules or mr?)
+- Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
+  workaround: get some newer 1.9.3 in manually (note that p0 has bugs
+  regarding puppet)
+- node on ubuntu is really ancient
+- probably postgres will be old too (they have their own repo I should
+  configure, and it's generally a hassle on mac)
+- Java (maybe just stick to doing that manually)
 
 Packages (these are installed by running puppet):
 - ruby (1.9.3 or newer because of tmuxinator)
@@ -22,7 +31,9 @@ Packages (these are installed by running puppet):
 - tmux
 - vim
 - mr
-- node
+- nodejs
+- ack-grep (ack on homebrew)
+- postgres?
 
 Gems (these have to be installed manually with gem install):
 - tmuxinator
@@ -34,7 +45,13 @@ vcsh repositories:
 - https://github.com/tfnico/config-vim
 
 To be moved into vcsh repos:
-- 
+- the caps lock remapping
+- tmux.conf
+- gitconfig (split work from private?)
+- zshrc
+- ackrc
+- tmuxinator
+- bin/* 
 
 Vim-Janus:
 - curl -Lo- https://bit.ly/janus-bootstrap | bash
