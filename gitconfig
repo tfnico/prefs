@@ -48,5 +48,7 @@
 	default = tracking
 [rebase]
 	autosquash = true
+[web]
+	browser = open
 [pager]
 	stash = false
