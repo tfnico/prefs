@@ -20,6 +20,10 @@ Problems for automating
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
   workaround: get some newer 1.9.3 in manually (note that p0 has bugs
   regarding puppet)
+  Workaround: http://blog.brightbox.co.uk/posts/next-generation-ruby-packages-for-ubuntu
+  Could also use RVM, I suppose.. Nice to just have one Ruby.
+- tmuxinator requires tmux >= 1.7, but Ubuntu currently comes with 1.6.
+  Manually installed one I found on https://launchpad.net/ubuntu/+source/tmux
 - node on ubuntu is really ancient
 - probably postgres will be old too (they have their own repo I should
   configure, and it's generally a hassle on mac)
@@ -36,7 +40,8 @@ Packages (these are installed by running puppet):
 - postgres?
 
 Gems (these have to be installed manually with gem install):
-- tmuxinator
+
+sudo gem install tmuxinator
 
 Running puppet
   sudo puppet apply my-machine.pp
