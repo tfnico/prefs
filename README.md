@@ -3,6 +3,7 @@ Conrecete TODO's:
 - Separate mac stuff from linux specific stuff (using vcsh?)
 - Incorporate puppet (with homebrew on mac)
 - Figure out how to manage keys
+- Get the .ssh config into some private repo
 
 Discrepancies on Mac:
 - Terminal is different
