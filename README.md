@@ -59,6 +59,9 @@ To be moved into vcsh repos:
 - tmuxinator
 - bin/* 
 
+Oh-my-zsh:
+- https://github.com/robbyrussell/oh-my-zsh
+
 Vim-Janus:
 - curl -Lo- https://bit.ly/janus-bootstrap | bash
 - https://github.com/carlhuda/janus/
