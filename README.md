@@ -59,7 +59,7 @@ To be moved into vcsh repos:
 - zshrc
 - ackrc
 - tmuxinator
-- bin/* 
+- bin/*
 
 Oh-my-zsh:
 - https://github.com/robbyrussell/oh-my-zsh
@@ -91,3 +91,4 @@ Install RVM like this:
 Clone these into ~/.vim/janus (TODO: do so automatically):
 - git://github.com/altercation/vim-colors-solarized.git
 - git@github.com:tfnico/vim-gradle.git
+- git@github.com:sukima/xmledit.git
