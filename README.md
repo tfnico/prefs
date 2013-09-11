@@ -4,6 +4,8 @@ Conrecete TODO's:
 - Incorporate puppet (with homebrew on mac)
 - Figure out how to manage keys
 - Get the .ssh config into some private repo
+- Try out Pure instead of ohmyzsh: https://github.com/sindresorhus/pure
+- Try out jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
 Discrepancies on Mac:
 - Terminal is different
