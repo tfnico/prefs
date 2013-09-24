@@ -5,7 +5,7 @@
 [alias]
     attic = "!f() { git tag attic/$1 $1;git branch -d $1;}; f"
 # git branch -D $1
-    st = status
+    st = !git status && git stash list
     co = checkout
     ci = commit
     b = branch
