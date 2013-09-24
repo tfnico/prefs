@@ -29,6 +29,7 @@
     ui = auto
 [core]
     editor = /usr/bin/vim
+	excludesfile = /Users/tfnico/prefs/global-git-ignore
 [diff]
 	tool = diffmerge
 [difftool]
