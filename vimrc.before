@@ -1,2 +1,4 @@
 "call janus#disable_plugin('tagbar')
 
+let g:airline_powerline_fonts = 1
+
