@@ -47,4 +47,12 @@ if [ -f "$HOME/.shell.sh" ]; then
 fi
 
 #Aliases
-alias tig="TERM=screen /usr/local/bin/tig"
+#Can't remember what the following fix was for. tmux problems
+#on ubuntu I think.
+#alias tig="TERM=screen /usr/local/bin/tig"
+
+#if on linux:
+#alias open="gnome-open"
+#alias pbcopy='xsel --clipboard --input'
+#alias pbpaste='xsel --clipboard --output'
+#
