@@ -46,13 +46,24 @@ if [ -f "$HOME/.shell.sh" ]; then
   source ~/.shell.sh
 fi
 
-#Aliases
-#Can't remember what the following fix was for. tmux problems
-#on ubuntu I think.
-#alias tig="TERM=screen /usr/local/bin/tig"
+# OS specific stuff
 
-#if on linux:
-#alias open="gnome-open"
-#alias pbcopy='xsel --clipboard --input'
-#alias pbpaste='xsel --clipboard --output'
-#
+platform='unknown'
+unamestr=$(uname)
+if [[ "$unamestr" == 'Linux' ]]; then
+   platform='linux'
+elif [[ "$unamestr" == 'FreeBSD' ]]; then
+   platform='freebsd'
+fi
+
+if [[ $platform == 'linux' ]]; then
+    #on osx we have open
+    alias open=gnome-open
+    #Can't remember what the following fix was for. tmux problems
+    #on ubuntu I think.
+    alias tig="TERM=screen /usr/local/bin/tig"
+    alias open="gnome-open"
+    alias pbcopy='xsel --clipboard --input'
+    alias pbpaste='xsel --clipboard --output'
+fi
+
