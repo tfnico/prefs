@@ -34,9 +34,6 @@ PATH=~/bin:~/company-bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin
 # Add NPM packages to node's path:
 export NODE_PATH=/usr/local/lib/node_modules
 
-# Detect and use macvim on OSX:
-case $OSTYPE in darwin*) alias vim=/Applications/MacVim.app/Contents/MacOS/Vim ;; esac
-
 export TERM=xterm-256color
 export EDITOR=vim
 
