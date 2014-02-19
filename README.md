@@ -92,3 +92,5 @@ Clone these into ~/.vim/janus (TODO: do so automatically):
 - git://github.com/altercation/vim-colors-solarized.git
 - git@github.com:tfnico/vim-gradle.git
 - git@github.com:sukima/xmledit.git
+- git://github.com/tpope/vim-jdaddy.git
+
