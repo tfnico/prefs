@@ -1,3 +1,9 @@
+How-to:
+
+# Bootstrap, install Puppet, homebrew, vcsh, mr
+# Run vcsh clone git@github.com:tfnico/config-mr.git mr
+# Run mr update
+
 Conrecete TODO's:
 - Replace deploy-script with vcsh repos
 - Separate mac stuff from linux specific stuff (using vcsh?)
