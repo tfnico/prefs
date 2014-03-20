@@ -8,6 +8,7 @@ Conrecete TODO's:
 - Try out jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
 Discrepancies on Mac:
+- Uses boxen to bootstrap puppet and homebrew: https://github.com/tfnico/my-boxen
 - Terminal is different
 - Copy/paste works differently (for tmux, vim)
 - Super/meta buttons are different (not a problem so far?)
@@ -17,8 +18,7 @@ Problems for automating
 - Janus
 - Prelude
 - oh-my-zsh
-- Have to install puppet and git manually for bootstrapping (git is
-  probably already in though)
+- Have to install puppet manually (bootstrap script on linux, boxen on mac)
 - vim-plugins (.janus/* as submodules or mr?)
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
   workaround: get some newer 1.9.3 in manually (note that p0 has bugs
@@ -53,7 +53,7 @@ vcsh repositories:
 - https://github.com/tfnico/config-vim
 
 To be moved into vcsh repos:
-- the caps lock remapping
+- the caps lock remapping (ubuntu only)
 - tmux.conf
 - gitconfig (split work from private?)
 - zshrc
