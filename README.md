@@ -1,26 +1,44 @@
-How-to:
+Current bootstrap process
+=========================
 
 # Bootstrap, install Puppet, homebrew, vcsh, mr
-# Run vcsh clone git@github.com:tfnico/config-mr.git mr
-# Run mr update
+# On mac: 
+    - Create /opt/boxen 
+    - git clone git@github.com:tfnico/my-boxen.git repo
+    - cd repo; boxen
+# On ubuntu:
+    - sudo puppet apply my-machine.pp
+# vcsh clone git@github.com:tfnico/config-mr.git mr
+# Run mr up (this should achieve the same as running ./deploy
+# gem install tmuxinator
+# set shell to be tmux
 
-Conrecete TODO's:
-- Replace deploy-script with vcsh repos
-- Separate mac stuff from linux specific stuff (using vcsh?)
-- Incorporate puppet (with homebrew on mac)
-- Figure out how to manage keys
+Sync
+====
+vcsh status
+
+Conrecete TODO's
+================
+- Replace deploy-script with vcsh repos (in progress)
 - Get the .ssh config into some private repo
+- Manage boxen repo with mr
+- vcsh/mr: Separate mac stuff from linux specific stuff
+
+Future experiments
+==================
 - Try out Pure instead of ohmyzsh: https://github.com/sindresorhus/pure
 - Try out jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
-Discrepancies on Mac:
-- Uses boxen to bootstrap puppet and homebrew: https://github.com/tfnico/my-boxen
+Discrepancies on Mac
+====================
+- Uses boxen to bootstrap puppet and homebrew
 - Terminal is different
 - Copy/paste works differently (for tmux, vim)
 - Super/meta buttons are different (not a problem so far?)
-- Remapping caps to ESC is done manually
+- Remapping caps to ESC is done with PCKeyboardHack (installed with boxen, configured manually)
 
-Problems for automating
+Still manual installs
+=====================
 - Janus
 - Prelude
 - oh-my-zsh
@@ -38,22 +56,6 @@ Problems for automating
   configure, and it's generally a hassle on mac)
 - Java (maybe just stick to doing that manually)
 
-Packages (these are installed by running puppet):
-- ruby (1.9.3 or newer because of tmuxinator)
-- vcsh
-- tmux
-- vim
-- mr
-- nodejs
-- ack-grep (ack on homebrew)
-- postgres?
-
-Gems (these have to be installed manually with gem install):
-
-sudo gem install tmuxinator
-
-Running puppet
-  sudo puppet apply my-machine.pp
 
 vcsh repositories:
 - https://github.com/tfnico/config-vim
