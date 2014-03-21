@@ -1,7 +1,7 @@
 include foo
 
 class foo {
-  package {'mr':
+  package {'myrepos':
     ensure => installed,
   }
   package {'nodejs':
