@@ -19,10 +19,8 @@ vcsh status
 
 Conrecete TODO's
 ================
-- Replace deploy-script with vcsh repos (in progress)
-- Get the .ssh config into some private repo
-- Manage boxen repo with mr
 - vcsh/mr: Separate mac stuff from linux specific stuff
+- Afterwards: Manage boxen repo with mr?
 
 Future experiments
 ==================
