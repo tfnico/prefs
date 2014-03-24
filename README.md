@@ -3,6 +3,7 @@ Current bootstrap process
 
 # Bootstrap, install Puppet, homebrew, vcsh, mr
 # On mac: 
+    - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
     - Create /opt/boxen 
     - git clone git@github.com:tfnico/my-boxen.git repo
     - cd repo; boxen
@@ -13,18 +14,23 @@ Current bootstrap process
 # gem install tmuxinator
 # set shell to be tmux
 
-Sync
-====
-vcsh status
+Setting up pure (instead of oh-my-zsh)
+======================================
+
+Set up:
+
+    cd ~/pure #cloned by myrepos
+    sudo ln -s "$PWD/pure.zsh" /usr/share/zsh/site-functions/prompt_pure_setup
 
 Conrecete TODO's
 ================
-- vcsh/mr: Separate mac stuff from linux specific stuff
-- Afterwards: Manage boxen repo with mr?
+# vcsh/mr: Separate mac stuff from linux specific stuff
+    - shared/git/spec/fixtures/modules/git/manifests/init.pp
+# Afterwards: Manage boxen repo with mr?
+# Add oh-my-zsh to mr/vcsh
 
 Future experiments
 ==================
-- Try out Pure instead of ohmyzsh: https://github.com/sindresorhus/pure
 - Try out jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
 Discrepancies on Mac
@@ -37,9 +43,7 @@ Discrepancies on Mac
 
 Still manual installs
 =====================
-- Janus
-- Prelude
-- oh-my-zsh
+- Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
 - Have to install puppet manually (bootstrap script on linux, boxen on mac)
 - vim-plugins (.janus/* as submodules or mr?)
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
@@ -53,28 +57,27 @@ Still manual installs
 - probably postgres will be old too (they have their own repo I should
   configure, and it's generally a hassle on mac)
 - Java (maybe just stick to doing that manually)
+- the caps lock remapping (ubuntu only, use boxen on mac)
 
-
-vcsh repositories:
-- https://github.com/tfnico/config-vim
-
-To be moved into vcsh repos:
-- the caps lock remapping (ubuntu only)
-- tmux.conf
-- gitconfig (split work from private?)
-- zshrc
-- ackrc
-- tmuxinator
-- bin/*
-
+Credits
+=======
 Oh-my-zsh:
 - https://github.com/robbyrussell/oh-my-zsh
 
+Pure instead of ohmyzsh: 
+- https://github.com/sindresorhus/pure
+
 Vim-Janus:
-- curl -Lo- https://bit.ly/janus-bootstrap | bash
 - https://github.com/carlhuda/janus/
 
-Get vim bundle and iTerm colors from:
+Clone these into ~/.vim/janus (TODO: do so automatically):
+- git://github.com/altercation/vim-colors-solarized.git
+- git@github.com:tfnico/vim-gradle.git
+- git@github.com:sukima/xmledit.git
+- git://github.com/tpope/vim-jdaddy.git
+
+
+Get missing solarized colors from:
 - http://ethanschoonover.com/solarized
 
 Set up Gnome terminal with the dircolors from:
@@ -93,10 +96,4 @@ Emacs setup is from
 
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-
-Clone these into ~/.vim/janus (TODO: do so automatically):
-- git://github.com/altercation/vim-colors-solarized.git
-- git@github.com:tfnico/vim-gradle.git
-- git@github.com:sukima/xmledit.git
-- git://github.com/tpope/vim-jdaddy.git
 
