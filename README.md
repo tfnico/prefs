@@ -2,17 +2,17 @@ Current bootstrap process
 =========================
 
 # Bootstrap, install Puppet, homebrew, vcsh, mr
-# On mac: 
-    - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
-    - Create /opt/boxen 
+# On mac:
+    - Create /opt/boxen
     - git clone git@github.com:tfnico/my-boxen.git repo
-    - cd repo; boxen
+    - cd repo; ./script/boxen
+    - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
 # On ubuntu:
     - sudo puppet apply my-machine.pp
 # vcsh clone git@github.com:tfnico/config-mr.git mr
 # Run mr up (this should achieve the same as running ./deploy
+# set shell to be zsh in Terminal apps
 # gem install tmuxinator
-# set shell to be tmux
 
 Setting up pure (instead of oh-my-zsh)
 ======================================
@@ -25,7 +25,7 @@ Set up:
 Conrecete TODO's
 ================
 # vcsh/mr: Separate mac stuff from linux specific stuff
-    - shared/git/spec/fixtures/modules/git/manifests/init.pp
+    - tmux: https://github.com/blast-hardcheese/tmux-MacOSX-pasteboard/commit/b04f38f1eeca0efb61e2954efe83ebdb2109876e
 # Afterwards: Manage boxen repo with mr?
 # Add oh-my-zsh to mr/vcsh
 
@@ -45,7 +45,7 @@ Still manual installs
 =====================
 - Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
 - Have to install puppet manually (bootstrap script on linux, boxen on mac)
-- vim-plugins (.janus/* as submodules or mr?)
+- vim-plugins (.janus/ as submodules or mr?)
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
   workaround: get some newer 1.9.3 in manually (note that p0 has bugs
   regarding puppet)
@@ -64,7 +64,7 @@ Credits
 Oh-my-zsh:
 - https://github.com/robbyrussell/oh-my-zsh
 
-Pure instead of ohmyzsh: 
+Pure instead of ohmyzsh:
 - https://github.com/sindresorhus/pure
 
 Vim-Janus:
@@ -96,4 +96,3 @@ Emacs setup is from
 
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-
