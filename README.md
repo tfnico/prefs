@@ -7,6 +7,8 @@ Current bootstrap process
     - git clone git@github.com:tfnico/my-boxen.git repo
     - cd repo; ./script/boxen
     - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
+    - Set up iterm profile manually with solarized theme. In keys, send
+      Left Option key as +Esc.
 # On ubuntu:
     - sudo puppet apply my-machine.pp
 # vcsh clone git@github.com:tfnico/config-mr.git mr
@@ -44,7 +46,6 @@ Discrepancies on Mac
 Still manual installs
 =====================
 - Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
-- Have to install puppet manually (bootstrap script on linux, boxen on mac)
 - vim-plugins (.janus/ as submodules or mr?)
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
   workaround: get some newer 1.9.3 in manually (note that p0 has bugs
@@ -71,7 +72,6 @@ Vim-Janus:
 - https://github.com/carlhuda/janus/
 
 Clone these into ~/.vim/janus (TODO: do so automatically):
-- git://github.com/altercation/vim-colors-solarized.git
 - git@github.com:tfnico/vim-gradle.git
 - git@github.com:sukima/xmledit.git
 - git://github.com/tpope/vim-jdaddy.git
