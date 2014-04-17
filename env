@@ -28,9 +28,11 @@ $FLASH_PLAYER:\
 $AIR_SDK/bin:\
 $MYSQL_HOME/bin
 
+# From http://golang.org/doc/code.html#GOPATH
+export GOPATH=$HOME/go
 
 # Note that we put /usr/local/bin in front of normal $PATH due to homebrew
-PATH=~/bin:~/company-bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$APPS:$PATH
+PATH=~/bin:~/company-bin:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin:$APPS:$GOPATH/bin:$PATH
 
 # Add NPM packages to node's path:
 export NODE_PATH=/usr/local/lib/node_modules
