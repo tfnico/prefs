@@ -9,6 +9,9 @@ Current bootstrap process
     - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
     - Set up iterm profile manually with solarized theme. In keys, send
       Left Option key as +Esc.
+    - Install nodenv: https://github.com/ekalinin/nodeenv
+      Set node version with `nodeenv versions` and then 
+                            `nodenv local [version]`
 # On ubuntu:
     - sudo puppet apply my-machine.pp
 # vcsh clone git@github.com:tfnico/config-mr.git mr
