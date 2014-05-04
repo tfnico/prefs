@@ -1,8 +1,13 @@
 Current bootstrap process
 =========================
 
-# Bootstrap, install Puppet, homebrew, vcsh, mr
-# On mac:
+# Clone this repo to ~/prefs
+# Bootstrap Ubuntu:
+    - sudo apt-get install puppet vcsh mr
+    - (puppet for installing packages)
+    - (vcsh for putting dotfiles in place)
+    - (mr for syncing dotfiles)
+# Bootstrap Mac:
     - Create /opt/boxen
     - git clone git@github.com:tfnico/my-boxen.git repo
     - cd repo; ./script/boxen
@@ -12,31 +17,29 @@ Current bootstrap process
     - Install nodenv: https://github.com/ekalinin/nodeenv
       Set node version with `nodeenv versions` and then 
                             `nodenv local [version]`
-# On ubuntu:
-    - sudo puppet apply my-machine.pp
-# vcsh clone git@github.com:tfnico/config-mr.git mr
-# Run mr up (this should achieve the same as running ./deploy
-# set shell to be zsh in Terminal apps
-# gem install tmuxinator
-
-Setting up pure (instead of oh-my-zsh)
-======================================
-
-Set up:
-
-    cd ~/pure #cloned by myrepos
-    sudo ln -s "$PWD/pure.zsh" /usr/share/zsh/site-functions/prompt_pure_setup
+# Ubuntu: Install packages (boxen will do the job on Mac)
+    - sudo puppet apply prefs/my-machine.pp
+# Set up dotfiles:
+    - vcsh clone git@github.com:tfnico/config-mr.git mr
+    - mr up
+# Mac: set shell to be zsh in iTerm app
+# Install tmuxinator:
+    - gem install tmuxinator
+# Link in pure zsh:
+    - sudo ln -s ~/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
 Conrecete TODO's
 ================
+ 
+# Avoid forking boxen!
+# Plugins in .vim/janus/* as submodules or mr?
 # vcsh/mr: Separate mac stuff from linux specific stuff
     - tmux: https://github.com/blast-hardcheese/tmux-MacOSX-pasteboard/commit/b04f38f1eeca0efb61e2954efe83ebdb2109876e
-# Afterwards: Manage boxen repo with mr?
 # Add oh-my-zsh to mr/vcsh
 
 Future experiments
 ==================
-- Try out jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
+- Try out oh-my-zsh jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
 Discrepancies on Mac
 ====================
@@ -49,7 +52,10 @@ Discrepancies on Mac
 Still manual installs
 =====================
 - Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
-- vim-plugins (.janus/ as submodules or mr?)
+- vim-plugins - clone these into ~/.vim/janus:
+    - git@github.com:tfnico/vim-gradle.git
+    - git@github.com:sukima/xmledit.git
+    - git@github.com:tpope/vim-jdaddy.git
 - Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
   workaround: get some newer 1.9.3 in manually (note that p0 has bugs
   regarding puppet)
@@ -63,8 +69,8 @@ Still manual installs
 - Java (maybe just stick to doing that manually)
 - the caps lock remapping (ubuntu only, use boxen on mac)
 
-Credits
-=======
+Credits/notes
+=============
 Oh-my-zsh:
 - https://github.com/robbyrussell/oh-my-zsh
 
@@ -73,11 +79,6 @@ Pure instead of ohmyzsh:
 
 Vim-Janus:
 - https://github.com/carlhuda/janus/
-
-Clone these into ~/.vim/janus (TODO: do so automatically):
-- git@github.com:tfnico/vim-gradle.git
-- git@github.com:sukima/xmledit.git
-- git://github.com/tpope/vim-jdaddy.git
 
 
 Get missing solarized colors from:
@@ -99,3 +100,4 @@ Emacs setup is from
 
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+ 
