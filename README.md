@@ -28,6 +28,26 @@ Current bootstrap process
 # Link in pure zsh:
     - sudo ln -s ~/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
+Still manual installs
+=====================
+- Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
+- vim-plugins - clone these into ~/.vim/janus:
+    - git@github.com:tfnico/vim-gradle.git
+    - git@github.com:sukima/xmledit.git
+    - git@github.com:tpope/vim-jdaddy.git
+- Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
+  workaround: get some newer 1.9.3 in manually (note that p0 has bugs
+  regarding puppet)
+  Workaround: http://blog.brightbox.co.uk/posts/next-generation-ruby-packages-for-ubuntu
+  Could also use RVM, I suppose.. Nice to just have one Ruby.
+- tmuxinator requires tmux >= 1.7, but Ubuntu currently comes with 1.6.
+  Manually installed one I found on https://launchpad.net/ubuntu/+source/tmux
+- node on ubuntu is really ancient
+- probably postgres will be old too (they have their own repo I should
+  configure, and it's generally a hassle on mac)
+- Java (maybe just stick to doing that manually)
+- the caps lock remapping (ubuntu only, use boxen on mac)
+
 Conrecete TODO's
 ================
  
@@ -49,25 +69,6 @@ Discrepancies on Mac
 - Super/meta buttons are different (not a problem so far?)
 - Remapping caps to ESC is done with PCKeyboardHack (installed with boxen, configured manually)
 
-Still manual installs
-=====================
-- Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
-- vim-plugins - clone these into ~/.vim/janus:
-    - git@github.com:tfnico/vim-gradle.git
-    - git@github.com:sukima/xmledit.git
-    - git@github.com:tpope/vim-jdaddy.git
-- Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
-  workaround: get some newer 1.9.3 in manually (note that p0 has bugs
-  regarding puppet)
-  Workaround: http://blog.brightbox.co.uk/posts/next-generation-ruby-packages-for-ubuntu
-  Could also use RVM, I suppose.. Nice to just have one Ruby.
-- tmuxinator requires tmux >= 1.7, but Ubuntu currently comes with 1.6.
-  Manually installed one I found on https://launchpad.net/ubuntu/+source/tmux
-- node on ubuntu is really ancient
-- probably postgres will be old too (they have their own repo I should
-  configure, and it's generally a hassle on mac)
-- Java (maybe just stick to doing that manually)
-- the caps lock remapping (ubuntu only, use boxen on mac)
 
 Credits/notes
 =============
