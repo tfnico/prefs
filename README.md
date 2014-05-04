@@ -50,7 +50,6 @@ Still manual installs
 
 Conrecete TODO's
 ================
- 
 # Avoid forking boxen!
 # Plugins in .vim/janus/* as submodules or mr?
 # vcsh/mr: Separate mac stuff from linux specific stuff
@@ -60,6 +59,22 @@ Conrecete TODO's
 Future experiments
 ==================
 - Try out oh-my-zsh jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
+
+Copy/paste
+
+==========
+Mixing together terminals, tmux, Vim, desktop and clipboard-managers is
+a real hoot. Here are some notes:
+
+Ubuntu: Use Glipper. Set it up to manage middle-mouse/marking so it will
+take care of xclip. C-y will move tmux buffer into xclip/Glipper, but
+you have to use middle-mouse button to paste it, or select the entry in
+Glipper to paste it with Ctrl-V. C-p will take from Glipper nicely.
+
+Yanking in Vim will add to xclip/Glipper. Pasting into Vim can be done via
+tmux or with the Terminal paste after activating the buffer in Glipper.
+In GVim you can reach Vim and xclip/Glipper buffers in the '*'
+buffer.
 
 Discrepancies on Mac
 ====================
