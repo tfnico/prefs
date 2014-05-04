@@ -1,5 +1,9 @@
-#export JAVA_HOME=`/usr/libexec/java_home -v '1.7'`
-JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+unamestr=$(uname)
+if [[ "$unamestr" == 'Linux' ]]; then
+  JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+elif [[ "$unamestr" == 'Darwin' ]]; then
+  JAVA_HOME=`/usr/libexec/java_home -v '1.7'`
+fi
 ANT_HOME=~/dev/ant/current
 # Commented out mvn since I prefer the one from homebrew
 #MVN_HOME=~/dev/maven/current
