@@ -7,7 +7,6 @@ fi
 ANT_HOME=~/dev/ant/current
 # Commented out mvn since I prefer the one from homebrew
 #MVN_HOME=~/dev/maven/current
-GIT_HOME=/usr/local/git
 # Use gradle from homebrew
 # GRADLE_HOME=~/dev/gradle/current
 GRIFFON_HOME=~/dev/griffon/current
@@ -23,7 +22,6 @@ MYSQL_HOME=/usr/local/mysql
 APPS=$VERTX_HOME/bin:\
 $VAGRANT_HOME/bin:\
 $SBT_HOME/bin:\
-$GIT_HOME/bin:\
 $ANT_HOME/bin:\
 $GRAILS_HOME/bin:\
 $GRIFFON_HOME/bin:\
