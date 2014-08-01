@@ -5,6 +5,7 @@
 # *.[oa]
 # *~
 .DS_Store
+._.DS_Store
 /target/
 /.idea/
 *.iml
