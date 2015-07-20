@@ -1,12 +1,12 @@
 Current bootstrap process
 =========================
 
-# Clone this repo to ~/prefs
 # Bootstrap Ubuntu:
-    - sudo apt-get install puppet vcsh mr
-    - (puppet for installing packages)
-    - (vcsh for putting dotfiles in place)
-    - (mr for syncing dotfiles)
+    - wget https://raw.githubusercontent.com/tfnico/prefs/master/my-machine.pp
+    - sudo apt-get install puppet
+    - sudo puppet apply my-machine.pp
+    - git clone https://github.com/tfnico/prefs.git
+    - Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
 # Bootstrap Mac:
     - Create /opt/boxen
     - git clone git@github.com:tfnico/my-boxen.git repo
@@ -17,12 +17,11 @@ Current bootstrap process
     - Install nodenv: https://github.com/ekalinin/nodeenv
       Set node version with `nodeenv versions` and then 
                             `nodenv local [version]`
-# Ubuntu: Install packages (boxen will do the job on Mac)
-    - sudo puppet apply prefs/my-machine.pp
+    - Set shell to be zsh in iTerm app
+# Bring private keys on to machine (for accessing private repositories)
 # Set up dotfiles:
     - vcsh clone git@github.com:tfnico/config-mr.git mr
     - mr up
-# Mac: set shell to be zsh in iTerm app
 # Install tmuxinator:
     - gem install tmuxinator
 # Link in pure zsh:
@@ -35,18 +34,12 @@ Still manual installs
     - git@github.com:tfnico/vim-gradle.git
     - git@github.com:sukima/xmledit.git
     - git@github.com:tpope/vim-jdaddy.git
-- Ubuntu currently has ruby 1.9.2, but tmuxinator needs 1.9.3:
-  workaround: get some newer 1.9.3 in manually (note that p0 has bugs
-  regarding puppet)
-  Workaround: http://blog.brightbox.co.uk/posts/next-generation-ruby-packages-for-ubuntu
-  Could also use RVM, I suppose.. Nice to just have one Ruby.
-- tmuxinator requires tmux >= 1.7, but Ubuntu currently comes with 1.6.
-  Manually installed one I found on https://launchpad.net/ubuntu/+source/tmux
-- node on ubuntu is really ancient
 - probably postgres will be old too (they have their own repo I should
   configure, and it's generally a hassle on mac)
 - Java (maybe just stick to doing that manually)
-- the caps lock remapping (ubuntu only, use boxen on mac)
+- the caps lock remapping
+    - ubuntu: xmodmap -e "keycode 66 = Escape" # add to login applications
+    - use boxen on mac
 
 Conrecete TODO's
 ================
@@ -61,7 +54,6 @@ Future experiments
 - Try out oh-my-zsh jump plugin: https://github.com/robbyrussell/oh-my-zsh/pull/2045
 
 Copy/paste
-
 ==========
 Mixing together terminals, tmux, Vim, desktop and clipboard-managers is
 a real hoot. Here are some notes:
