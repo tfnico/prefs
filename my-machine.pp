@@ -1,16 +1,23 @@
 include foo
 
 class foo {
-  package {'myrepos':
-    ensure => installed,
-  }
-  package {'nodejs':
-    ensure => installed,
-  }
-  package {'vcsh':
-    ensure => installed,
-  }
-  package {'tmux':
+
+  $packages = [
+    'vcsh',    # for putting dotfiles in place
+    'myrepos', # for syncing dotfiles
+    'git',
+    'tig',
+    'curl',
+    'vim',
+    'tmux',
+    'htop',
+    'node',
+    'glipper', # paste buffers
+    'rake',    # needed for vim-janus installer
+    'openvpn',
+  ]
+
+  package { $packages:
     ensure => installed,
   }
 }
