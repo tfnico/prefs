@@ -20,19 +20,19 @@ First:
 * install homebrew according to http://brew.sh/
 * install puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
 * Install casks using puppet:
-
+```
       puppet module install thekevjames-homebrew
       puppet module install puppetlabs-stdlib
       puppet apply puppet-mac.pp
-
+```
 * If the above fails, have a look at https://github.com/TheKevJames/puppet-homebrew/issues/2
 * Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
 * Set shell to be zsh in iTerm app
 # Set up dotfiles:
-
+```
     vcsh clone git@github.com:tfnico/config-mr.git mr
     mr up
-
+```
 # Link in pure zsh:
 
     sudo ln -s ~/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
