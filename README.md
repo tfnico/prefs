@@ -1,29 +1,34 @@
 Current bootstrap process
 =========================
 
-# Bootstrap Ubuntu:
-    - wget https://raw.githubusercontent.com/tfnico/prefs/master/my-machine.pp
-    - sudo apt-get install puppet
-    - sudo puppet apply my-machine.pp
+# Initial steps
+
+* Bring private keys on to machine (for accessing private repositories)
+* Clone prefs:
     - git clone https://github.com/tfnico/prefs.git
+
+# Bootstrap Ubuntu:
+    - sudo apt-get install puppet
+    - sudo puppet apply puppet-linux.pp
     - Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
+
 # Bootstrap Mac:
-    - Create /opt/boxen
-    - git clone git@github.com:tfnico/my-boxen.git repo
-    - cd repo; ./script/boxen
-    - sudo mkdir /usr/share/mr;sudo ln -s /opt/boxen/homebrew/Cellar/mr/1.20130826/share/mr/vcsh /usr/share/mr/vcsh
-    - Set up iterm profile manually with solarized theme. In keys, send
-      Left Option key as +Esc.
-    - Install nodenv: https://github.com/ekalinin/nodeenv
-      Set node version with `nodeenv versions` and then 
-                            `nodenv local [version]`
-    - Set shell to be zsh in iTerm app
-# Bring private keys on to machine (for accessing private repositories)
+
+First:
+    - xcode-select --install
+
+* install homebrew according to http://brew.sh/
+* install puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
+* Install casks using puppet:
+      puppet module install thekevjames-homebrew
+      puppet module install puppetlabs-stdlib
+      puppet apply puppet-mac.pp
+* If the above fails, have a look at https://github.com/TheKevJames/puppet-homebrew/issues/2
+* Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
+* Set shell to be zsh in iTerm app
 # Set up dotfiles:
-    - vcsh clone git@github.com:tfnico/config-mr.git mr
-    - mr up
-# Install tmuxinator:
-    - gem install tmuxinator
+    vcsh clone git@github.com:tfnico/config-mr.git mr
+    mr up
 # Link in pure zsh:
     - sudo ln -s ~/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
 
@@ -34,8 +39,6 @@ Still manual installs
     - git@github.com:tfnico/vim-gradle.git
     - git@github.com:sukima/xmledit.git
     - git@github.com:tpope/vim-jdaddy.git
-- probably postgres will be old too (they have their own repo I should
-  configure, and it's generally a hassle on mac)
 - Java (maybe just stick to doing that manually)
 - the caps lock remapping
     - ubuntu: xmodmap -e "keycode 66 = Escape" # add to login applications
