@@ -1,4 +1,0 @@
-#!/bin/zsh
-gits --no-master svn rebase
-gits --no-master svn fetch
-

@@ -1,2 +1,0 @@
-#!/bin/zsh
-git rev-list --parents HEAD | egrep "^[a-f0-9]{40}$"

@@ -1,3 +1,0 @@
-#!/bin/bash
-# FALSE -> Hides, TRUE -> Shows
-defaults write com.apple.finder AppleShowAllFiles FALSE
