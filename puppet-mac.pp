@@ -1,7 +1,6 @@
 include stdlib
 include tfnico::packages
 
-
 class tfnico::packages {
 
   $packages = [
@@ -30,8 +29,8 @@ class tfnico::packages {
   ]
 
   package { $packages:
-    provider => 'brew',
     ensure   => installed,
+    provider => 'brew',
   }
 
   $casks = [
