@@ -5,19 +5,28 @@ include tfnico::packages
 class tfnico::packages {
 
   $packages = [
+    'ack',
+    'ant',
     'curl',
     'git', # should replace default git
     'gitslave',
+    'grails',
     'htop',
     'jenv',
+    'maven',
     'myrepos', # for syncing dotfiles
+    'netcat',
     'node',
     'openvpn',
+    'p7zip',
     'postgresql',
+    'rpl',
+    'ssh-copy-id',
     'tig',
     'tmux',
     'vcsh',    # for putting dotfiles in place
     'vim',
+    'wget',
   ]
 
   package { $packages:
@@ -38,6 +47,7 @@ class tfnico::packages {
     'libreoffice',
     'iterm2',
     'intellij-idea',
+    'macvim',
     'pgadmin3',
     'seil',
     'skype',
