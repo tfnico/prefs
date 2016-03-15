@@ -22,6 +22,7 @@ First:
 * install puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
 * Install casks using puppet:
 ```
+export PATH=$PATH:/opt/puppetlabs/bin
 sudo puppet module install thekevjames-homebrew
 sudo puppet module install puppetlabs-stdlib
 sudo puppet apply puppet-mac.pp
