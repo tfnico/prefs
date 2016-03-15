@@ -34,13 +34,13 @@ class tfnico::packages {
   }
 
   $casks = [
+    'clipmenu',
     'cyberduck',
     'dropbox',
     'firefox',
     'google-chrome',
     'google-drive',
     'hipchat',
-    'jumpcut',
     'keepassx',
     'keycastr',
     'libreoffice',
