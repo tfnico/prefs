@@ -11,7 +11,7 @@ class foo {
     'vim',
     'tmux',
     'htop',
-    'node',
+    'nodejs',
     'glipper', # paste buffers
     'rake',    # needed for vim-janus installer
     'openvpn',

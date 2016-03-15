@@ -9,10 +9,15 @@ Current bootstrap process
     - git clone https://github.com/tfnico/prefs.git
 
 # Bootstrap Ubuntu:
-    - sudo apt-get install puppet
-    - sudo puppet apply puppet-linux.pp
-    - Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
-    - Remap caps key: xmodmap -e "keycode 66 = Escape" # add to login applications
+
+* Install and run Puppet:
+```
+sudo apt-get install puppet
+sudo puppet apply puppet-linux.pp
+```
+
+* Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
+* Remap caps key: xmodmap -e "keycode 66 = Escape" # add to login applications
 
 # Bootstrap Mac:
 
@@ -20,16 +25,15 @@ First:
 
     xcode-select --install
 
-* install homebrew according to http://brew.sh/ (maybe puppet can do this?)
-* install puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
-* Install casks using puppet:
+* install Homebrew according to http://brew.sh/ (maybe Puppet can do this?)
+* install Puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
+* Install casks using Puppet:
 ```
 export PATH=$PATH:/opt/puppetlabs/bin
 sudo puppet module install thekevjames-homebrew
 sudo puppet module install puppetlabs-stdlib
 sudo puppet apply puppet-mac.pp
 ```
-* If the above fails, have a look at https://github.com/TheKevJames/puppet-homebrew/issues/2
 * Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
 * OS X Keyboard preferences 
 ** Modifier keys, set Caps Lock to No Action
@@ -47,7 +51,7 @@ It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones wi
 
 Still manual installs
 =====================
-- Janus: curl -Lo- https://bit.ly/janus-bootstrap | bash
+- Janus: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
 - vim-plugins - clone these into ~/.vim/janus:
     - git@github.com:tfnico/vim-gradle.git
     - git@github.com:sukima/xmledit.git
@@ -59,8 +63,7 @@ Conrecete TODO's
 
 * Find a better way to auth all the mr repos
 * Plugins in .vim/janus/* as submodules or mr?
-* vcsh/mr: Separate mac stuff from linux specific stuff
-    - tmux: https://github.com/blast-hardcheese/tmux-MacOSX-pasteboard/commit/b04f38f1eeca0efb61e2954efe83ebdb2109876e
+* vcsh/mr: Separate mac stuff from linux specific stuff?
 * Add oh-my-zsh to mr/vcsh
 
 Future experiments
