@@ -9,6 +9,7 @@ class tfnico::packages {
     'git', # should replace default git
     'gitslave',
     'htop',
+    'jenv',
     'myrepos', # for syncing dotfiles
     'node',
     'openvpn',
