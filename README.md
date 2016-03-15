@@ -4,6 +4,7 @@ Current bootstrap process
 # Initial steps
 
 * Bring private keys on to machine (for accessing private repositories)
+* Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
 * Clone prefs:
     - git clone https://github.com/tfnico/prefs.git
 
@@ -19,7 +20,7 @@ First:
 
     xcode-select --install
 
-* install homebrew according to http://brew.sh/
+* install homebrew according to http://brew.sh/ (maybe puppet can do this?)
 * install puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
 * Install casks using puppet:
 ```
@@ -34,7 +35,7 @@ sudo puppet apply puppet-mac.pp
 ** Modifier keys, set Caps Lock to No Action
 ** Use F keys as standard function keys
 ** Shortcuts -> Tab All Controls
-* Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
+* Setup up tmux mouse scrolling: http://stackoverflow.com/questions/30185210/ubuntu-change-tmux-1-8-to-tmux-next-1-9
 
 # Set up dotfiles:
 ```
