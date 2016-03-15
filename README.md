@@ -11,6 +11,7 @@ Current bootstrap process
     - sudo apt-get install puppet
     - sudo puppet apply puppet-linux.pp
     - Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
+    - Remap caps key: xmodmap -e "keycode 66 = Escape" # add to login applications
 
 # Bootstrap Mac:
 
@@ -29,15 +30,18 @@ sudo puppet apply puppet-mac.pp
 ```
 * If the above fails, have a look at https://github.com/TheKevJames/puppet-homebrew/issues/2
 * Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
-* Set shell to be zsh in iTerm app
+* OS X Keyboard preferences 
+** Modifier keys, set Caps Lock to No Action
+** Use F keys as standard function keys
+** Shortcuts -> Tab All Controls
+* Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
 * Set up dotfiles:
 ```
 vcsh clone git@github.com:tfnico/config-mr.git mr
 mr up
 ```
-# Link in pure zsh:
 
-    sudo ln -s ~/pure/pure.zsh /usr/local/share/zsh/site-functions/prompt_pure_setup
+It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones with vcsh pull <repo name>.
 
 Still manual installs
 =====================
@@ -48,7 +52,6 @@ Still manual installs
     - git@github.com:tpope/vim-jdaddy.git
 - Java (maybe just stick to doing that manually)
 - the caps lock remapping
-    - ubuntu: xmodmap -e "keycode 66 = Escape" # add to login applications
     - use boxen on mac
 
 Conrecete TODO's
