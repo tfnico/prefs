@@ -35,7 +35,8 @@ sudo puppet apply puppet-mac.pp
 ** Use F keys as standard function keys
 ** Shortcuts -> Tab All Controls
 * Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
-* Set up dotfiles:
+
+# Set up dotfiles:
 ```
 vcsh clone git@github.com:tfnico/config-mr.git mr
 mr up
@@ -51,16 +52,15 @@ Still manual installs
     - git@github.com:sukima/xmledit.git
     - git@github.com:tpope/vim-jdaddy.git
 - Java (maybe just stick to doing that manually)
-- the caps lock remapping
-    - use boxen on mac
 
 Conrecete TODO's
 ================
-# Avoid forking boxen!
-# Plugins in .vim/janus/* as submodules or mr?
-# vcsh/mr: Separate mac stuff from linux specific stuff
+
+* Find a better way to auth all the mr repos
+* Plugins in .vim/janus/* as submodules or mr?
+* vcsh/mr: Separate mac stuff from linux specific stuff
     - tmux: https://github.com/blast-hardcheese/tmux-MacOSX-pasteboard/commit/b04f38f1eeca0efb61e2954efe83ebdb2109876e
-# Add oh-my-zsh to mr/vcsh
+* Add oh-my-zsh to mr/vcsh
 
 Future experiments
 ==================
@@ -83,24 +83,13 @@ buffer.
 
 Discrepancies on Mac
 ====================
-- Uses boxen to bootstrap puppet and homebrew
+- Uses homebrew/cask with puppet
 - Terminal is different
 - Copy/paste works differently (for tmux, vim)
 - Super/meta buttons are different (not a problem so far?)
-- Remapping caps to ESC is done with PCKeyboardHack (installed with boxen, configured manually)
 
-
-Credits/notes
-=============
-Oh-my-zsh:
-- https://github.com/robbyrussell/oh-my-zsh
-
-Pure instead of ohmyzsh:
-- https://github.com/sindresorhus/pure
-
-Vim-Janus:
-- https://github.com/carlhuda/janus/
-
+Other notes
+===========
 
 Get missing solarized colors from:
 - http://ethanschoonover.com/solarized
