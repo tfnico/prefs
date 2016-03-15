@@ -21,7 +21,7 @@ sudo puppet apply puppet-linux.pp
 
 # Bootstrap Mac:
 
-First:
+* Install xcode command line tools:
 
     xcode-select --install
 
