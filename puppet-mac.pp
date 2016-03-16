@@ -34,7 +34,9 @@ class tfnico::packages {
   }
 
   $casks = [
+    'atom',
     'clipmenu',
+    'cord',
     'cyberduck',
     'dropbox',
     'easysimbl',
@@ -57,6 +59,7 @@ class tfnico::packages {
     'teamviewer',
     'tunnelblick',
     'vagrant',
+    'vmware-fusion',
     'virtualbox',
     'vlc',
     'wireshark',
