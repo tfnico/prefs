@@ -36,10 +36,13 @@ sudo puppet apply puppet-mac.pp
 ```
 * Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
 * OS X Keyboard preferences 
-** Modifier keys, set Caps Lock to No Action
-** Use F keys as standard function keys
-** Shortcuts -> Tab All Controls
+  * Modifier keys, set Caps Lock to No Action
+  * Use F keys as standard function keys
+  * Shortcuts -> Tab All Controls
 * Setup up tmux mouse scrolling: http://stackoverflow.com/questions/30185210/ubuntu-change-tmux-1-8-to-tmux-next-1-9
+* Install the [Hack font](https://github.com/chrissimpkins/Hack#desktop-installation):
+
+    brew cask install caskroom/fonts/font-hack
 
 # Set up dotfiles:
 ```
@@ -62,7 +65,7 @@ Conrecete TODO's
 ================
 
 * Find a better way to auth all the mr repos
-* Plugins in .vim/janus/* as submodules or mr?
+* Plugins in .vim/janus/ as submodules or mr?
 * vcsh/mr: Separate mac stuff from linux specific stuff?
 * Add oh-my-zsh to mr/vcsh
 
@@ -82,15 +85,16 @@ Glipper to paste it with Ctrl-V. C-p will take from Glipper nicely.
 
 Yanking in Vim will add to xclip/Glipper. Pasting into Vim can be done via
 tmux or with the Terminal paste after activating the buffer in Glipper.
-In GVim you can reach Vim and xclip/Glipper buffers in the '*'
+In GVim you can reach Vim and xclip/Glipper buffers in the '\*'
 buffer.
 
 Discrepancies on Mac
 ====================
-- Uses homebrew/cask with puppet
-- Terminal is different
-- Copy/paste works differently (for tmux, vim)
-- Super/meta buttons are different (not a problem so far?)
+
+* Uses homebrew/cask with puppet
+* Terminal is different
+* Copy/paste works differently (for tmux, vim)
+* Super/meta buttons are different (not a problem so far?)
 
 Other notes
 ===========
