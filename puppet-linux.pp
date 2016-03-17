@@ -15,6 +15,7 @@ class foo {
     'glipper', # paste buffers
     'rake',    # needed for vim-janus installer
     'openvpn',
+    'xclip',
   ]
 
   package { $packages:
