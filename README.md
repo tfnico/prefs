@@ -23,7 +23,9 @@ sudo puppet apply puppet-linux.pp
 
 * Install xcode command line tools:
 
-    xcode-select --install
+```
+xcode-select --install
+```
 
 * install Homebrew according to http://brew.sh/ (maybe Puppet can do this?)
 * install Puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
