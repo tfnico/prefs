@@ -81,20 +81,24 @@ Mixing together terminals, tmux, Vim, desktop and clipboard-managers is
 a real hoot. Here are some notes:
 
 Ubuntu: Use Glipper. Set it up to manage middle-mouse/marking so it will
-take care of xclip. C-y will move tmux buffer into xclip/Glipper, but
-you have to use middle-mouse button to paste it, or select the entry in
-Glipper to paste it with Ctrl-V. C-p will take from Glipper nicely.
+take care of xclip. y will move tmux buffer into xclip/Glipper. C-p will take
+from Glipper nicely.
 
 Yanking in Vim will add to xclip/Glipper. Pasting into Vim can be done via
 tmux or with the Terminal paste after activating the buffer in Glipper.
 In GVim you can reach Vim and xclip/Glipper buffers in the '\*'
 buffer.
 
+For more discussions/ideas on copy/paste:
+
+* https://wiki.archlinux.org/index.php/tmux
+* https://github.com/tmux-plugins/tmux-yank looks really interesting
+* https://github.com/ThomasAdam/tmux/blob/master/FAQ
+
 Discrepancies on Mac
 ====================
 
 * Uses homebrew/cask with puppet
-* Terminal is different
 * Copy/paste works differently (for tmux, vim)
 * Super/meta buttons are different (not a problem so far?)
 
