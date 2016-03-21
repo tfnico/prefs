@@ -3,7 +3,7 @@ Current bootstrap process
 
 # Initial steps
 
-* Bring private keys on to machine (for accessing private repositories)
+* Bring SSH keys and GPG on to the new machine 
 * Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
 * Clone prefs:
     - git clone https://github.com/tfnico/prefs.git

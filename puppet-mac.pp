@@ -9,9 +9,11 @@ class tfnico::packages {
     'curl',
     'git', # should replace default git
     'gitslave',
+    'gpg',
     'grails',
     'htop',
     'jenv',
+    'keybase',
     'maven',
     'myrepos', # for syncing dotfiles
     'netcat',
