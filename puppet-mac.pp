@@ -14,6 +14,7 @@ class tfnico::packages {
     'htop',
     'jenv',
     'keybase',
+    'keystore-explorer',
     'maven',
     'myrepos', # for syncing dotfiles
     'netcat',
