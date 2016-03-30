@@ -66,7 +66,8 @@ Still manual installs
 Conrecete TODO's
 ================
 
-* Find a better way to auth all the mr repos
+* Move prefs into mr and do the initial puppet-apply using downloaded file instead
+* Find a better way to auth all the mr repos (initial ssh alias config problem..)
 * Plugins in .vim/janus/ as submodules or mr?
 * vcsh/mr: Separate mac stuff from linux specific stuff?
 * Add oh-my-zsh to mr/vcsh
