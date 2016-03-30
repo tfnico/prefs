@@ -39,7 +39,6 @@ class tfnico::packages {
   $casks = [
     'atom',
     'clipmenu',
-    'cord',
     'cyberduck',
     'dropbox',
     'easysimbl',
