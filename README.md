@@ -57,6 +57,7 @@ It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones wi
 Still manual installs
 =====================
 - Janus: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
+- [ripgrep](https://github.com/BurntSushi/ripgrep) - still not in all repos.
 - vim-plugins - clone these into ~/.vim/janus:
     - git@github.com:tfnico/vim-gradle.git
     - git@github.com:sukima/xmledit.git
