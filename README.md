@@ -4,7 +4,6 @@ Current bootstrap process
 # Initial steps
 
 * Bring SSH keys and GPG on to the new machine 
-* Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
 * Clone prefs:
     - git clone https://github.com/tfnico/prefs.git
 
@@ -29,6 +28,8 @@ It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones wi
 
 Still manual installs
 =====================
+
+- Install oh-my-zsh according to https://github.com/robbyrussell/oh-my-zsh
 - Janus: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
 - [ripgrep](https://github.com/BurntSushi/ripgrep) - still not in all repos.
 - vim-plugins - clone these into ~/.vim/janus:
