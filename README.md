@@ -17,34 +17,7 @@ sudo puppet apply puppet-linux.pp
 ```
 
 * Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
-* Remap caps key: xmodmap -e "keycode 66 = Escape" # add to login applications
-
-# Bootstrap Mac:
-
-* Install xcode command line tools:
-
-```
-xcode-select --install
-```
-
-* install Homebrew according to http://brew.sh/ (maybe Puppet can do this?)
-* install Puppet according to http://docs.puppetlabs.com/puppet/latest/reference/install_osx.html
-* Install casks using Puppet:
-```
-export PATH=$PATH:/opt/puppetlabs/bin
-sudo puppet module install thekevjames-homebrew
-sudo puppet module install puppetlabs-stdlib
-sudo puppet apply puppet-mac.pp
-```
-* Set up iterm profile manually with solarized theme. In keys, send Left Option key as +Esc.
-* OS X Keyboard preferences 
-  * Modifier keys, set Caps Lock to No Action
-  * Use F keys as standard function keys
-  * Shortcuts -> Tab All Controls
-* Setup up tmux mouse scrolling: http://stackoverflow.com/questions/30185210/ubuntu-change-tmux-1-8-to-tmux-next-1-9
-* Install the [Hack font](https://github.com/chrissimpkins/Hack#desktop-installation):
-
-    brew cask install caskroom/fonts/font-hack
+* Remap caps key: xmodmap -e "keycode 66 = Escape" # add to .profile
 
 # Set up dotfiles:
 ```
@@ -70,7 +43,6 @@ Conrecete TODO's
 * Move prefs into mr and do the initial puppet-apply using downloaded file instead
 * Find a better way to auth all the mr repos (initial ssh alias config problem..)
 * Plugins in .vim/janus/ as submodules or mr?
-* vcsh/mr: Separate mac stuff from linux specific stuff?
 * Add oh-my-zsh to mr/vcsh
 
 Future experiments
@@ -97,12 +69,6 @@ For more discussions/ideas on copy/paste:
 * https://github.com/tmux-plugins/tmux-yank looks really interesting
 * https://github.com/ThomasAdam/tmux/blob/master/FAQ
 
-Discrepancies on Mac
-====================
-
-* Uses homebrew/cask with puppet
-* Copy/paste works differently (for tmux, vim)
-* Super/meta buttons are different (not a problem so far?)
 
 Other notes
 ===========
@@ -115,9 +81,6 @@ Set up Gnome terminal with the dircolors from:
 
 Gnome terminal colors fixing is from:
 -https://github.com/sigurdga/gnome-terminal-colors-solarized
-
-Git completion is from
-- http://www.codethatmatters.com/2010/01/git-autocomplete-in-mac-os-x/
 
 Emacs setup is from
 - http://batsov.com/articles/2011/10/09/getting-started-with-emacs-24/
