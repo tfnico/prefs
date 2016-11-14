@@ -5,6 +5,7 @@ class foo {
   $packages = [
     'vcsh',    # for putting dotfiles in place
     'myrepos', # for syncing dotfiles
+    'dconf-cli',
     'git',
     'tig',
     'curl',
@@ -14,6 +15,7 @@ class foo {
     'nodejs',
     'glipper', # paste buffers
     'rake',    # needed for vim-janus installer
+    'ruby-dev', # needed for jekyll at least
     'openvpn',
     'xclip',
   ]

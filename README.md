@@ -16,7 +16,17 @@ sudo puppet apply puppet-linux.pp
 ```
 
 * Disable workspace shortcuts (Lubuntu: use https://code.google.com/p/obkey/ )
-* Remap caps key: xmodmap -e "keycode 66 = Escape" # add to .profile
+
+Some unity/compiz fixes:
+
+* Disable Ctrl+Alt+up for maximizing (Ctrl+Super+up is enough) in
+  Compiz/Grid configuration
+* Disable all the spaces shortcuts under Keyboard
+* Remap caps to be escape:
+```
+# Edit the empty value in /etc/default/keyboard
+XKBOPTIONS="caps:escape"
+```
 
 # Set up dotfiles:
 ```
@@ -90,4 +100,4 @@ Emacs setup is from
 
 Install RVM like this:
 - bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
- 
+
