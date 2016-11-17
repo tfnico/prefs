@@ -24,7 +24,9 @@ Some unity/compiz fixes:
 * Disable all the spaces shortcuts under Keyboard
 * Remap caps to be escape:
 ```
-# Edit the empty value in /etc/default/keyboard
+dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:escape']"
+
+# Alternatively, edit the empty value in /etc/default/keyboard
 XKBOPTIONS="caps:escape"
 ```
 
