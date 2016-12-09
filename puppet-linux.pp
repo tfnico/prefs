@@ -3,6 +3,7 @@ include foo
 class foo {
 
   $packages = [
+    'ack',     # just so the vim ack plugin will activate
     'vcsh',    # for putting dotfiles in place
     'myrepos', # for syncing dotfiles
     'dconf-cli',

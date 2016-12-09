@@ -49,6 +49,8 @@ Still manual installs
     - git@github.com:sukima/xmledit.git
     - git@github.com:tpope/vim-jdaddy.git
 - Java (maybe just stick to doing that manually)
+- nvm: git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+
 
 Conrecete TODO's
 ================
@@ -71,8 +73,11 @@ Ubuntu: Use Glipper. Set it up to manage middle-mouse/marking so it will
 take care of xclip. y will move tmux buffer into xclip/Glipper. C-p will take
 from Glipper nicely.
 
-Yanking in Vim will add to xclip/Glipper. Pasting into Vim can be done via
-tmux or with the Terminal paste after activating the buffer in Glipper.
+Yanking in Vim will add to xclip/Glipper if you use the '+' buffer.
+
+Pasting into Vim can be done via tmux or with the Terminal paste
+after activating the buffer in Glipper.
+
 In GVim you can reach Vim and xclip/Glipper buffers in the '\*'
 buffer.
 
