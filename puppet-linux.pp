@@ -3,21 +3,39 @@ include foo
 class foo {
 
   $packages = [
-    'ack',     # just so the vim ack plugin will activate
-    'vcsh',    # for putting dotfiles in place
-    'myrepos', # for syncing dotfiles
-    'dconf-cli',
-    'git',
-    'tig',
+    'ack-grep',     # just so the vim ack plugin will activate
+    'audacity',
+    'compizconfig-settings-manager', # for tweaking more compiz stuff
     'curl',
-    'vim',
-    'tmux',
-    'htop',
-    'nodejs',
+    'dconf-cli',
+    'fonts-powerline',
+    'git',
     'glipper', # paste buffers
+    'gparted',
+    'gquilt', #mercurial gui
+    'gtk-recordmydesktop',
+    'guake',
+    'htop',
+    'keepass2',
+    'mercurial',
+    'mercurial-git',
+    'mumble',
+    'myrepos', # for syncing dotfiles
+    'network-manager-openvpn',
+    'network-manager-openvpn-gnome',
+    'nodejs',
+    'openvpn',
+    'quiterss',
     'rake',    # needed for vim-janus installer
     'ruby-dev', # needed for jekyll at least
-    'openvpn',
+    'tig',
+    'tmate',
+    'tmux',
+    'unetbootin',
+    'vagrant',
+    'vcsh',    # for putting dotfiles in place
+    'vim-gnome',
+    'vlc',
     'xclip',
   ]
 
