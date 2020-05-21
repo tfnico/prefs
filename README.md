@@ -4,10 +4,8 @@ Current bootstrap process
 # Initial steps
 
 * Bring SSH keys and GPG on to the new machine 
-* Clone prefs:
-    - git clone https://github.com/tfnico/prefs.git
 
-# Bootstrap Ubuntu:
+# Bootstrap Ubuntu
 
 Install the basic of packages:
 ```
@@ -49,19 +47,12 @@ mr up
 
 It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones with vcsh pull <repo name>.
 
-Still manual installs
-=====================
+# Still manual installs
 
 - Google Chrome
 - Keybase
 - oh-my-zsh
-- Vim-janus: `curl -Lo- https://bit.ly/janus-bootstrap | bash`
-- vim-plugins - clone these into ~/.vim/janus:
-    - git@github.com:tfnico/vim-gradle.git
-    - git@github.com:sukima/xmledit.git
-    - git@github.com:tpope/vim-jdaddy.git
 
-Conrecete TODO's
-================
+# Conrecete TODO's
 
 * Find a better way to auth all the mr repos (initial ssh alias config problem..)
