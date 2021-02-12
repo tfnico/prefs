@@ -25,6 +25,9 @@ snap install \
 keepassxc \
 mumble
 ```
+# Add snaps bin to environment
+
+See [here](https://askubuntu.com/questions/910821/programs-installed-via-snap-not-showing-up-in-launcher).
 
 # Disable workspaces
 
