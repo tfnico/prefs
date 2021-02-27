@@ -16,10 +16,12 @@ guake \
 htop \
 ripgrep \
 myrepos \
+neovim \
 tig \
 tmate \
 tmux \
-vcsh
+vcsh \
+zsh
 
 snap install \
 keepassxc \
