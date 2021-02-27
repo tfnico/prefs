@@ -21,6 +21,7 @@ ripgrep \
 tig \
 tmate \
 tmux \
+tmuxinator \
 vcsh \
 zsh
 ```
