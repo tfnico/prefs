@@ -14,18 +14,15 @@ curl \
 copyq \
 guake \
 htop \
-ripgrep \
+keepassxc \
 myrepos \
 neovim \
+ripgrep \
 tig \
 tmate \
 tmux \
 vcsh \
 zsh
-
-snap install \
-keepassxc \
-mumble
 ```
 # Add snaps bin to environment
 
