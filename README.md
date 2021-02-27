@@ -33,6 +33,10 @@ See [here](https://askubuntu.com/questions/910821/programs-installed-via-snap-no
 
 In keyboard settings, disable all shortcuts for workspaces.
 
+# Configure Guake
+
+Start at login. Start with full screen. Set keyboard shortcut to Ctrl+Esc.
+
 # Remap caps to be escape
 
 ```
@@ -48,14 +52,9 @@ vcsh clone git@github.com:tfnico/config-mr.git mr
 mr up
 ```
 
-It's still a bit fiddly to get all the repos auth'ed. Do the problematic ones with vcsh pull <repo name>.
-
 # Still manual installs
 
 - Google Chrome
 - Keybase
 - oh-my-zsh
 
-# Conrecete TODO's
-
-* Find a better way to auth all the mr repos (initial ssh alias config problem..)
