@@ -57,4 +57,5 @@ mr up
 - Google Chrome
 - Keybase
 - oh-my-zsh
+- VS Code (the snap has broken keyboard shortcuts)
 
