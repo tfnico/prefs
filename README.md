@@ -12,22 +12,58 @@ Install the basic of packages:
 sudo apt install \
 curl \
 copyq \
+fd-find \
+flameshot \
+gnome-tweaks \
 guake \
 htop \
 keepassxc \
 myrepos \
 neovim \
 ripgrep \
+solaar \
 tig \
 tmate \
 tmux \
 tmuxinator \
 vcsh \
+virtualbox \
 zsh
 ```
-# Add snaps bin to environment
 
-See [here](https://askubuntu.com/questions/910821/programs-installed-via-snap-not-showing-up-in-launcher).
+# Snaps
+
+- Bruno
+- Keybase
+- LibreOffice
+- Postman
+- Slack
+- VS Code
+- snap install google-cloud-cli --classic
+
+# Still manual installs
+
+- Google Chrome
+- oh-my-zsh
+- gcloud
+- hurl
+- go
+- fd
+- GoLand
+- VirtualBox
+
+# Get copyq working
+
+https://copyq.readthedocs.io/en/latest/known-issues.html#on-linux-global-shortcuts-pasting-or-clipboard-monitoring-does-not-work
+
+Global shortcut: https://askubuntu.com/questions/1344833/copyq-global-shortcut-not-working-on-ubuntu-21-04
+
+Startup application:
+
+```
+env QT_QPA_PLATFORM=xcb copyq
+```
+
 
 # Disable workspaces
 
@@ -38,6 +74,10 @@ In keyboard settings, disable all shortcuts for workspaces.
 Start at login. Start with full screen. Set keyboard shortcut to Ctrl+Esc.
 
 # Remap caps to be escape
+
+There's now an option for this in `gnome-tweaks`.
+
+Old way:
 
 ```
 dconf write "/org/gnome/desktop/input-sources/xkb-options" "['caps:escape']"
@@ -51,11 +91,4 @@ XKBOPTIONS="caps:escape"
 vcsh clone git@github.com:tfnico/config-mr.git mr
 mr up
 ```
-
-# Still manual installs
-
-- Google Chrome
-- Keybase
-- oh-my-zsh
-- VS Code (the snap has broken keyboard shortcuts)
 
